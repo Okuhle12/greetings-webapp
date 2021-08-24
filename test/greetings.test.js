@@ -15,10 +15,10 @@ const greetExerciseFactory = require('../greetingFactory');
         it('Should be able to greet people in English', function(){
 
             let greets = greetExerciseFactory();
-
+            greets.greet_("English", "AmanDa")
        
         
-        assert.equal("Hello, Amanda", greets.greet_("English", "AmanDa"));
+        assert.equal("Hello, Amanda", greets.greeted());
     
              
 
@@ -29,18 +29,21 @@ const greetExerciseFactory = require('../greetingFactory');
     it('Should be able to greet people in English', function(){
 
         let greets = greetExerciseFactory();
+        greets.greet_('English', 'qaqamba')
 
     
     
-    assert.equal("Hello, Qaqamba", greets.greet_('English', 'qaqamba'));
+    assert.equal("Hello, Qaqamba", greets.greeted());
    });
    it('Should be able to greet people in English', function(){
 
     let greets = greetExerciseFactory();
+    greets.greet_('English', 'zUSIPhe')
+    
 
 
 
-assert.equal("Hello, Zusiphe", greets.greet_('English', 'zUSIPhe'));
+assert.equal("Hello, Zusiphe", greets.greeted());
 });
 
 
@@ -48,58 +51,66 @@ assert.equal("Hello, Zusiphe", greets.greet_('English', 'zUSIPhe'));
    it('Should be able to greet people in Isixhosa', function(){
 
     let greets = greetExerciseFactory();
+    greets.greet_('Isixhosa', 'KuNGAwo')
 
 
-  assert.equal("Molo, Kungawo", greets.greet_('Isixhosa', 'KuNGAwo'));
 
-  });
-  it('Should be able to greet people in Isixhosa', function(){
-
-    let greets = greetExerciseFactory();
-
-
-  assert.equal("Molo, Sisamkelo", greets.greet_('Isixhosa', 'Sisamkelo'));
+  assert.equal("Molo, Kungawo", greets.greeted());
 
   });
   it('Should be able to greet people in Isixhosa', function(){
 
     let greets = greetExerciseFactory();
+    greets.greet_('Isixhosa', 'Sisamkelo')
 
 
-  assert.equal("Molo, Olwethu", greets.greet_('Isixhosa', 'OlweTHU'));
+  assert.equal("Molo, Sisamkelo", greets.greeted());
+
+  });
+  it('Should be able to greet people in Isixhosa', function(){
+
+    let greets = greetExerciseFactory();
+    greets.greet_('Isixhosa', 'OlweTHU')
+
+
+  assert.equal("Molo, Olwethu", greets.greeted());
 
   });
   it('Should be able to greet people in French', function(){
 
     let greets = greetExerciseFactory();
+    greets.greet_('French', 'SaKHiwo')
 
 
 
-  assert.equal("Bonjour, Sakhiwo", greets.greet_('French', 'SaKHiwo'));
+  assert.equal("Bonjour, Sakhiwo", greets.greeted());
   });
   it('Should be able to greet people in French', function(){
 
     let greets = greetExerciseFactory();
+    greets.greet_('French', 'LihlE')
 
 
 
-  assert.equal("Bonjour, Lihle", greets.greet_('French', 'LihlE'));
+  assert.equal("Bonjour, Lihle", greets.greeted());
   });
   it('Should be able to greet people in French', function(){
 
     let greets = greetExerciseFactory();
+    greets.greet_('French', 'LeeeH')
 
 
 
-  assert.equal("Bonjour, Leeeh", greets.greet_('French', 'LeeeH'));
+  assert.equal("Bonjour, Leeeh", greets.greeted());
   });
   it('Should return "invalid name" when a character greeted contains numbers and string', function(){
 
     let greets = greetExerciseFactory();
+    greets.greet_("English", "amanda2222")
 
 
 
-assert.equal("invalid name", greets.greet_("English", "amanda2222"));
+assert.equal("", greets.greeted());
 
      
 

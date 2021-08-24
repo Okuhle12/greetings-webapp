@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my greet excercise</title>
+    <link rel="stylesheet" href="../css/greet.css">
+</head>
+<body>
+<div class="container"></div>
+<div class="heading">
+    <h1>Greeting</h1>
+
+</div>
+<br>
+<br>
+<!--for my -->
+<div class="counter"></div>
+{{!-- <div class="errorDisplay"> </div> --}}
+<form action="/" method="POST">
+<div class="textBox">
+
+    <p class="tag"> Please enter name and select a language so that you can be greeted </p>
+    <p class="errors"></p>
+    <p class="eri"></p>
+    
+    <br>
+    <label for="fname">Name:</label>
+    <input type="text" id="fname" name="namess" class="box" placeholder="enter your name"><label style="margin-left: 10px ; color: darkgrey; font-weight: bolder;" for="">Counter:</label><div class ="displayCounter">{{counter}}</div><br><br>
+
+    <br>
+  
+    <!--for radio buttons-->
+    <input type="radio" id="English" class="eng" name="language" value="English" >English 
+ 
+    <input type="radio" id="Isixhosa" class="isi" name="language" value="Isixhosa" >Isixhosa 
+ 
+    <input type="radio" id="French" class="fren" name="language" value="French" >French
+
+    <button class="button-primary GreetMe" type="submit" name="button">Greet me</button>
+   
+  
+     <br>
+     <br>
+     <br>
+    
+</div>
+</form>
+<div class="displayMessage"> {{displayMessage}}</div>
+ </div>   
+</body>
+</html>
