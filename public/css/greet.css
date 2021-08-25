@@ -71,6 +71,21 @@ button {
     background-color:darkgray;
 }
 
+table {
+    text-align: center;
+    font-size: 20px;
+}
+
+tr, td {
+    text-align: center;
+    font-size: 20px;
+}
+
+.users {
+    text-align: center;
+    font-size: 4em;
+}
+
 .displayCounter {
     font-size: large;
     margin-left: 340px;
