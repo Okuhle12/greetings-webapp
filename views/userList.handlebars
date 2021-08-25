@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Names Greeted</h1>
+
+    <table>
+        <tr>
+            <th>Names:</th>
+
+        </tr>
+        {{#each namesList}}
+        <tr>
+            <td><a href="/greeted/{{@this}}">{{@this}}</a></td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

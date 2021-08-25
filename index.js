@@ -53,6 +53,12 @@ app.post('/', function(req, res){
     res.redirect('/')
 });
 
+app.get('/greeted', function(req, res){
+    let greetedNames = GreetMe.getName();
+    res.render('userList', {namesList: greetedNames})
+})
+
+
 const PORT = process.env.PORT || 8000;
 
 
