@@ -3,9 +3,40 @@ module.exports = function greetExerciseFactory(){
 
     var regex = /^[A-Za-z ]+$/;
     
-    var namesArr = [];
+    var namesArr = {};
 
     var greetMessage = "";
+
+    // We want to create a map where we going to store names
+    
+    //cunter for each  person
+    // function pushName(name){
+
+    // if (namesList[name]===undefined){
+    // namesList[name]=1
+    
+    // }
+    // else{
+    // //counter for everyone
+    // namesList[name]++
+    // }
+    // }
+    
+    // function getNamesList(){
+    // return nameslist;
+    // }
+
+    // // and assign it to object keys
+    //  function greetingsCounter(){
+    //  //create a variable 
+    // var listOfNames =object.keys(namesList)
+    // return listOfNames.length;
+    // }
+
+
+
+
+
     
 
 
@@ -23,9 +54,9 @@ function greet_(language,namess){
     }
 
     
-    if(!namesArr.includes(namess)){
-        namesArr.push(namess);
-    }
+    // if(!namesArr.includes(namess)){
+    //     namesArr.push(namess);
+    // }
 
     
     if(language === "English"){
@@ -120,15 +151,26 @@ function storedNames(names){
     //this help the app not to count one name twice when the name is greeted more than once
 
 
-    if(!namesArr.includes(names)){
-        return namesArr.push(names);
-    }
-    return;
+    // if(!namesArr.includes(names)){
+    //     return namesArr.push(names);
+    // }
+    // return;
+    if (namesArr[names]===undefined){
+        namesArr[names]=1
+        
+        }
+        else{
+        //counter for everyone
+        namesArr[names]++
+ }
 }
 
 
 function Counterr(){
-     return namesArr.length;
+    //  return namesArr.length;
+    var listOfNames = Object.keys(namesArr)
+
+    return listOfNames.length;
      
 }
 
