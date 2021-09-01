@@ -81,9 +81,9 @@ tr, td {
     font-size: 20px;
 }
 
-.users {
-    text-align: center;
-    font-size: 4em;
+.Users {
+    margin-left: 40%;
+    font-size: 1.5rem
 }
 
 .displayCounter {
@@ -95,6 +95,12 @@ tr, td {
 }
 .eri{
     color: darkgreen;
+}
+
+.bura{
+    border-radius: 30%;
+    font-size: large;
+    margin-left: -40%;
 }
 
 @media (max-width: 700px) {

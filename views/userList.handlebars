@@ -1,17 +1,30 @@
-<div class="container">
-    <h1>Names Greeted:</h1>
 
-   <div class="Users">
-        <table>
+
+
+<div class="container">
+
+<div class="heading">
+<h1 >Names Greeted:</h1>
+</div>
+<br>
+<br>
+<div class="Users" >
+<table>
         {{!-- <tr>
             <th>Names:</th>
 
         </tr> --}}
-        {{#each namesList}}
-        <tr>
-            <td><a href="/greeted/{{@key}}">{{@key}}</a></td>
-        </tr>
-        {{/each}}
-    </table>
-   </div>
+{{#each namesList}}
+<tr>
+<td><a href="/greeted/{{@key}}">{{@key}}</a></td>
+
+</tr>
+{{/each}}
+</table>
+<br><br><br>
+<button class="bura">
+<a href="/">Back Home</a>
+</button>
+</div>
+
 </div>
